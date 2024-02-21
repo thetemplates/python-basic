@@ -39,6 +39,4 @@ class TestRandom:
 
         assert (value >= minimum) & (value < maximum), "The random value must be a value within [0.00 999.99)"
 
-        src.functions.cache.Cache().delete()
-
-
+        src.functions.cache.Cache().exc()
