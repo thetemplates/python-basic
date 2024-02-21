@@ -24,7 +24,7 @@ class Cache:
 
     def __delete(self, pattern: str) -> None:
         """
-        
+
         :return:
         """
 
@@ -37,7 +37,7 @@ class Cache:
 
     def exc(self):
         """
-        
+
         :return: None
         """
 
