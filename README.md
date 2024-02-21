@@ -29,9 +29,12 @@ The output should include
 |:---|:---|:---|:---|:---|
 |python-basic|latest|$\ldots$|$\ldots$|$\ldots$|
 
+**In progress ...**
+
+
 <br>
 
-### Development Notes
+### pylint
 
 The directive
 
@@ -45,7 +48,7 @@ generates the dotfile `.pylintrc` of the static code analyser [pylint](https://p
 python -m pylint --rcfile .pylintrc ...
 ```
 
-The `.pylintrc` file of this template project has been amended to adhere to team norms, including
+The `.pylintrc` file of this template project has been **amended to adhere to team norms**, including
 
 * Maximum number of characters on a single line.
   > max-line-length=127
@@ -53,11 +56,13 @@ The `.pylintrc` file of this template project has been amended to adhere to team
 * Maximum number of lines in a module.
   > max-module-lines=135
 
-* And more
+* $\ldots$
+
+**In progress ...**
 
 <br>
 
-### Testing
+### pytest
 
 An example.  Study the programs
 
@@ -70,7 +75,7 @@ Subsequently, test the program `src.algorithms.random` via the command
 python -m pytest tests/algorithms/test_random.py
 ```
 
-More notes upcoming.
+**In progress ...**
 
 
 <br>
@@ -84,17 +89,3 @@ More notes upcoming.
 
 <br>
 <br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
