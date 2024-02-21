@@ -29,6 +29,7 @@ The output should include
 |:---|:---|:---|:---|:---|
 |python-basic|latest|$\ldots$|$\ldots$|$\ldots$|
 
+<br>
 
 ### Development Notes
 
@@ -54,7 +55,22 @@ The `.pylintrc` file of this template project has been amended to adhere to team
 
 * And more
 
+<br>
 
+### Testing
+
+An example.  Study the programs
+
+* src.algorithms.random
+* tests.algorithms.test_random
+
+Subsequently, test the program `src.algorithms.random` via the command
+
+```shell
+python -m pytest tests/algorithms/test_random.py
+```
+
+More notes upcoming.
 
 
 <br>
