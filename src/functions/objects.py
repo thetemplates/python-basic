@@ -63,8 +63,8 @@ class Objects:
 
         if response.status_code == 200:
             return response.json()
-        else:
-            raise Exception(f'Failure code: {response.status_code}')
+
+        raise f'Failure code: {response.status_code}'
 
     @staticmethod
     def read(uri: str) -> dict:
