@@ -17,7 +17,7 @@ class Roots:
 
     def exc(self, value: float) -> float:
         """
-        
+
         :param value: An integer value
         """
 
