@@ -18,7 +18,7 @@ def main():
     logger.info('The square root of %s: %s', value, roots.exc(value=value))
 
     # Deleting __pycache__
-    src.functions.cache.Cache().delete()
+    src.functions.cache.Cache().exc()
 
 
 if __name__ == '__main__':
