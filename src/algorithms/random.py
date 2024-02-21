@@ -28,7 +28,7 @@ class Random:
 
     def exc(self) -> float:
         """
-        
+
         :return: A random number
         """
 
