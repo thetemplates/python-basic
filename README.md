@@ -29,6 +29,34 @@ The output should include
 |:---|:---|:---|:---|:---|
 |python-basic|latest|$\ldots$|$\ldots$|$\ldots$|
 
+
+### Notes
+
+The directive
+
+```shell
+pylint --generate-rcfile > .pylintrc
+```
+
+generates the dotfile `.pylintrc` of the static code analyser [pylint](https://pylint.pycqa.org/en/latest/user_guide/checkers/features.html).  Subsequently, analyse via
+
+```shell
+python -m pylint --rcfile .pylintrc ...
+```
+
+The `.pylintrc` file of this template project has been amended to adhere to team norms, including
+
+* Maximum number of characters on a single line.
+  > max-line-length=127
+
+* Maximum number of lines in a module.
+  > max-module-lines=135
+
+* And more
+
+
+
+
 <br>
 <br>
 
