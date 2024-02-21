@@ -14,9 +14,6 @@ class Serial:
     """
 
     def __init__(self):
-        """
-        Constructor
-        """
         pass
 
     @staticmethod
@@ -27,8 +24,8 @@ class Serial:
         :return:
         """
 
-        with open(file=uri, mode='r') as stream:
+        with open(file=uri, mode='r', encoding='utf-8') as stream:
             try:
                 return yaml.load(stream=stream, Loader=yaml.CLoader)
             except yaml.YAMLError as err:
-                raise Exception(err) from err
+                raise err
