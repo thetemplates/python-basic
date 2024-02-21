@@ -13,9 +13,9 @@ def main():
     logger: logging.Logger = logging.getLogger(__name__)
     logger.info('Templates')
 
-    # The square root of a random number
-    example: float = random.exc()
-    logger.info('The square root of %s: %s', example, roots.exc(value=example))
+    # A random value and its square root
+    value: float = random.exc()
+    logger.info('The square root of %s: %s', value, roots.exc(value=value))
 
     # Deleting __pycache__
     src.functions.cache.Cache().delete()
