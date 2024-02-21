@@ -17,9 +17,9 @@ class Random:
         """
         The constructor
         """
-        
+
         # Constructing a random generator
-        seed = config.Config().SEED
+        seed = config.Config().seed()
         self.__rng = np.random.default_rng(seed=seed)
 
         # The random number boundaries
