@@ -1,6 +1,6 @@
 <br>
 
-A basic template for Python projects.  These notes are incomplete: in progress.
+A basic template for Python projects.  These notes are incomplete and a few programs are pending: in progress.
 
 <br>
 
