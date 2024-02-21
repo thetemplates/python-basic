@@ -1,10 +1,10 @@
 <br>
 
-A basic template for ...
+A basic template for Python projects.  These notes are incomplete: in progress.
 
 <br>
 
-### Steps
+### Remote Environment
 
 Building an image for remote development, i.e., development via a container, requires
 
@@ -30,7 +30,7 @@ The output should include
 |python-basic|latest|$\ldots$|$\ldots$|$\ldots$|
 
 
-### Notes
+### Development Notes
 
 The directive
 
