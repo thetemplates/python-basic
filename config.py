@@ -1,11 +1,24 @@
+"""
+Module config.py
+"""
+
 
 class Config:
+    """
+    Description
+    -----------
+
+    A class for configurations
+    """
 
     def __init__(self) -> None:
+        pass
+
+    def seed(self) -> int:
         """
-        Constructor
+        The seed for random number generators
+
+        :return: An integer
         """
 
-
-        # the seed for random number generators
-        self.SEED = 5
+        return 5
