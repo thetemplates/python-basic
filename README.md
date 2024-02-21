@@ -4,6 +4,14 @@ A basic template for Python projects.  These notes are incomplete: in progress.
 
 <br>
 
+_develop_<br>
+[![Templates](https://github.com/thetemplates/python-basic/actions/workflows/main.yml/badge.svg?branch=develop)](https://github.com/thetemplates/python-basic/actions/workflows/main.yml)
+
+_master_<br>
+[![Templates](https://github.com/thetemplates/python-basic/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/thetemplates/python-basic/actions/workflows/main.yml)
+
+<br>
+
 ### Remote Environment
 
 Building an image for remote development, i.e., development via a container, requires
