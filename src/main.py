@@ -13,15 +13,10 @@ def main():
     logger: logging.Logger = logging.getLogger(__name__)
     logger.info('Templates')
 
+    # The square root of a random number
+    example: float = random.exc()
+    logger.info('The square root of %s: %s', example, roots.exc(value=example))
 
-    random = src.algorithms.random.Random()
-
-    roots = src.algorithms.roots.Roots()
-
-    logger.info(roots.exc(value=random.exc()))
-    logger.info(roots.exc(value=random.exc()))
-
-    
     # Deleting __pycache__
     src.functions.cache.Cache().delete()
 
@@ -41,5 +36,9 @@ if __name__ == '__main__':
     import src.functions.cache
     import src.algorithms.random
     import src.algorithms.roots
+
+    # Instances
+    random = src.algorithms.random.Random()
+    roots = src.algorithms.roots.Roots()
 
     main()
