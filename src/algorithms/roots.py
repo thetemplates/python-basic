@@ -9,7 +9,7 @@ class Roots:
     """
     Description
     -----------
-    A class that returns the square root of integer values only.
+    A class that returns the square root of values >= 0.
     """
 
     def __init__(self) -> None:
@@ -18,7 +18,13 @@ class Roots:
     def exc(self, value: float) -> float:
         """
 
-        :param value: An integer value
+        :param value: A float value
         """
 
-        return math.sqrt(value)
+        # assert value >= 0, "The module roots.py calculates the square root of values >= 0 only."
+
+        try:
+            value = math.sqrt(value)
+            return value
+        except ValueError as err:
+            raise err from err
