@@ -21,8 +21,6 @@ class Roots:
         :param value: A float value
         """
 
-        # assert value >= 0, "The module roots.py calculates the square root of values >= 0 only."
-
         try:
             value = math.sqrt(value)
             return value
