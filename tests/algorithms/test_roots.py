@@ -35,3 +35,5 @@ class TestRoots:
             assert root  == math.sqrt(value), "The calculation is incorrect"
         except ValueError as err:
             logging.log(level=logging.INFO, msg=err)
+
+        src.functions.cache.Cache().exc()
