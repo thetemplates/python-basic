@@ -33,9 +33,9 @@ docker images
 
 The output should include
 
-|repository|tag|image id|created|size|
-|:---|:---|:---|:---|:---|
-|python-basic|latest|$\ldots$|$\ldots$|$\ldots$|
+| repository   | tag    | image id | created  | size     |
+|:-------------|:-------|:---------|:---------|:---------|
+| python-basic | latest | $\ldots$ | $\ldots$ | $\ldots$ |
 
 **In progress ...**
 
