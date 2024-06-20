@@ -37,7 +37,12 @@ should include
 |:-------------|:-------|:---------|:---------|:---------|
 | fundamentals | latest | $\ldots$ | $\ldots$ | $\ldots$ |
 
-**In progress ...**
+
+<br>
+
+### Remote Development via Integrated Development Environment
+
+
 
 
 <br>
