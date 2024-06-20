@@ -56,7 +56,14 @@ docker ps --all
 
 ### Remote Development via Integrated Development Environment
 
+An IDE (independent development environment) is a helpful remote development tool.  The **IntelliJ
+IDEA** instructions are:
 
+> Connect to the Docker [daemon](https://www.jetbrains.com/help/idea/docker.html#connect_to_docker)
+> * **Settings** $\rightarrow$ **Build, Execution, Deployment** $\rightarrow$ **Docker** $\rightarrow$ **WSL:** `operating system`
+> * **View** $\rightarrow$ **Tool Window** $\rightarrow$ **Services** <br>Within the **Containers** section connect to the running instance of interest, or ascertain connection to the running instance of interest.
+
+**Visual Studio Code** has its container attachment instructions; study [Attach Container](https://code.visualstudio.com/docs/devcontainers/attach-container).
 
 
 <br>
