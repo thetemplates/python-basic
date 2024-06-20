@@ -1,6 +1,7 @@
-dask[complete]>=2023.11
+dask[complete]>=2024.*
 dask-expr
 graphviz
+pydot
 numpy>=1.25.*
 pandas>=2.0.*
 scipy>=1.11.*
