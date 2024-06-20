@@ -11,6 +11,9 @@ _master_<br>
 [![Templates](https://github.com/thetemplates/python-basic/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/thetemplates/python-basic/actions/workflows/main.yml)
 
 <br>
+<br>
+
+## Environments
 
 ### Remote Environment
 
@@ -97,7 +100,7 @@ The `.pylintrc` file of this template project has been **amended to adhere to te
 
 * $\ldots$
 
-**In progress ...**
+
 
 <br>
 
