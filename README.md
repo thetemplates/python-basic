@@ -52,6 +52,8 @@ i.e., -w, must be inline with this project's top directory.  Get the name of the
 docker ps --all
 ```
 
+Note, never deploy a root container, study the production [Dockerfile](Dockerfile); cf. [/.devcontainer/Dockerfile](.devcontainer/Dockerfile)
+
 <br>
 
 ### Remote Development via Integrated Development Environment
