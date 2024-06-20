@@ -14,28 +14,28 @@ _master_<br>
 
 ### Remote Environment
 
-Building an image for remote development, i.e., development via a container, requires
+For this Python project/template, the remote development environment requires
 
-* Dockerfile
-* requirements.txt
+* [Dockerfile](.devcontainer/Dockerfile)
+* [requirements.txt](.devcontainer/requirements.txt)
 
-Study this project's examples, subsequently build an image using the command
+An image is built via the command
 
 ```shell
-docker build . --file .devcontainer/Dockerfile -t python-basic
+docker build . --file .devcontainer/Dockerfile -t fundamentals
 ```
 
-Next, print the machine's list of images
+Subsequently, the output of command
 
 ```shell
 docker images
 ```
 
-The output should include
+should include
 
 | repository   | tag    | image id | created  | size     |
 |:-------------|:-------|:---------|:---------|:---------|
-| python-basic | latest | $\ldots$ | $\ldots$ | $\ldots$ |
+| fundamentals | latest | $\ldots$ | $\ldots$ | $\ldots$ |
 
 **In progress ...**
 
