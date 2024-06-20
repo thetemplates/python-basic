@@ -1,6 +1,6 @@
 <br>
 
-A basic template for Python projects.  These notes are incomplete and a few programs are pending, but the structure and programs are in line with language standards and team norms: in progress.
+A basic template for Python projects.  Incomplete, but the structure and programs are in line with language standards and team norms.
 
 <br>
 
