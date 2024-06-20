@@ -98,11 +98,9 @@ The `.pylintrc` file of this template project has been **amended to adhere to te
 * Maximum number of lines in a module.
   > max-module-lines=135
 
-* $\ldots$
-
-
 
 <br>
+
 
 ### pytest
 
@@ -117,7 +115,9 @@ Subsequently, test the program `src.algorithms.random` via the command
 python -m pytest tests/algorithms/test_random.py
 ```
 
+
 <br>
+
 
 ### flake8
 
