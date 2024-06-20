@@ -118,13 +118,14 @@ python -m pytest tests/algorithms/test_random.py
 
 ### flake8
 
-logic
+This `flake8` directive inspects issues in relation to logic (F7), syntax (Python E9, Flake F7), mathematical
+formulae symbols (F63), undefined variable names (F82):
 
 ```bash
 python -m flake8 --count --select=E9,F63,F7,F82 --show-source --statistics src/data
 ```
 
-complexity
+Additionally, inspect complexity via
 
 ```shell
 python -m flake8 --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics src/data
