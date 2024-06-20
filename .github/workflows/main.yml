@@ -71,14 +71,14 @@ jobs:
           printf "\n"
           echo "============================= pytest session starts =============================="
           
-          printf "\npytest tests/algorithms/test_random.py"
+          printf "\n pytest tests/algorithms/test_random.py"
           pytest -o python_files=test_random.py
 
       - name: Coverage with pytest-cov
         run: |
-          printf "\n"
+          printf "\n "
           echo "============================= coverage session starts =============================="
           
-          printf "\nCoverage tests/algorithms/"
+          printf "\n Coverage tests/algorithms/"
           pytest --cov-report term-missing  --cov src/algorithms/ tests/algorithms/
   
