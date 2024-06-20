@@ -114,8 +114,21 @@ Subsequently, test the program `src.algorithms.random` via the command
 python -m pytest tests/algorithms/test_random.py
 ```
 
-**In progress ...**
+<br>
 
+### flake8
+
+logic
+
+```bash
+python -m flake8 --count --select=E9,F63,F7,F82 --show-source --statistics src/data
+```
+
+complexity
+
+```shell
+python -m flake8 --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics src/data
+```
 
 <br>
 <br>
