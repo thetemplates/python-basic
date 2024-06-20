@@ -15,7 +15,7 @@ _master_<br>
 
 ## Environments
 
-### Remote Environment
+### Remote Development
 
 For this Python project/template, the remote development environment requires
 
@@ -59,7 +59,7 @@ Note, never deploy a root container, study the production [Dockerfile](Dockerfil
 
 <br>
 
-### Remote Development via Integrated Development Environment
+### Remote Development & Integrated Development Environments
 
 An IDE (independent development environment) is a helpful remote development tool.  The **IntelliJ
 IDEA** instructions are:
