@@ -45,7 +45,7 @@ should include
 
 <br>
 
-Subsequently, run a container, an instance, of the image `fundamentals` via:
+Subsequently, run a container, i.e., an instance, of the image `fundamentals` via:
 
 <br>
 
@@ -61,17 +61,16 @@ i.e., -w, must be inline with this project's top directory.  Get the name of the
 docker ps --all
 ```
 
-Note, never deploy a root container, study the production [Dockerfile](Dockerfile); cf. [/.devcontainer/Dockerfile](.devcontainer/Dockerfile)
+Never deploy a root container, study the production [Dockerfile](Dockerfile); cf. [/.devcontainer/Dockerfile](.devcontainer/Dockerfile)
 
 <br>
 
 ### Remote Development & Integrated Development Environments
 
-An IDE (independent development environment) is a helpful remote development tool.  The **IntelliJ
-IDEA** instructions are:
+An IDE (integrated development environment) is a helpful remote development tool.  The **IntelliJ
+IDEA** set up involves connecting to a machine's Docker [daemon](https://www.jetbrains.com/help/idea/docker.html#connect_to_docker), the steps are
 
-> Connect to the Docker [daemon](https://www.jetbrains.com/help/idea/docker.html#connect_to_docker)
-> * **Settings** $\rightarrow$ **Build, Execution, Deployment** $\rightarrow$ **Docker** $\rightarrow$ **WSL:** `operating system`
+> * **Settings** $\rightarrow$ **Build, Execution, Deployment** $\rightarrow$ **Docker** $\rightarrow$ **WSL:** {select the linux operating system}
 > * **View** $\rightarrow$ **Tool Window** $\rightarrow$ **Services** <br>Within the **Containers** section connect to the running instance of interest, or ascertain connection to the running instance of interest.
 
 <br>
@@ -84,7 +83,7 @@ IDEA** instructions are:
 
 ## Code Analysis
 
-The GitHub Actions script [main.yml](.github/workflows/main.yml) conducts code analysis within a Cloud GitHub Workspace.  Depending on the actions script, code analysis may occur `on push` to any repository branch, or `on push` to a specific branch.
+The GitHub Actions script [main.yml](.github/workflows/main.yml) conducts code analysis within a Cloud GitHub Workspace.  Depending on the script, code analysis may occur `on push` to any repository branch, or `on push` to a specific branch.
 
 The sections herein outline remote code analysis.
 
@@ -159,13 +158,13 @@ This example illustrates automatic asset delivery.  The diagram outlines the del
 <img src="/assets/beforehand-static.png" alt="Asset Delivery">
 
 
-Delivery to Amazon ECR (Elastic Container Registry) is conditional.  If you do not have an Amazon account, and/or you have not set up the GitHub Secrets 
+Delivery to Amazon ECR (Elastic Container Registry) is conditional.  **If you do not have an Amazon account and/or** you have not set up the GitHub Secrets 
 
 * AWS_ENTRY
 * AWS_ARN_ECR_ACTIONS: Amazon ECR & GitHub Actions interaction role
 * AWS_REGION: region code
 
-that enable delivery to ECR via the directives
+that enable delivery to Amazon ECR via the directive
 
 ```yaml
   with:
