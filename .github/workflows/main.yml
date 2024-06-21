@@ -4,7 +4,6 @@ on: [push]
 
 env:
   REGISTRY: ghcr.io
-  AMAZON: ${{ false }}
 
 jobs:
   build:
@@ -128,7 +127,7 @@ jobs:
   ecr:
     name: Amazon Elastic Container Registry
     needs: build
-    if: ${{ false }}
+    if: ${{ true }}
     runs-on: ubuntu-latest
 
     permissions:
