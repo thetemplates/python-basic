@@ -159,6 +159,28 @@ This example illustrates automatic asset delivery.  The diagram outlines the del
 <img src="/assets/beforehand-static.png" alt="Asset Delivery">
 
 
+Delivery to Amazon ECR (Elastic Container Registry) is conditional.  If you do not have an Amazon account, and/or you have not set up the GitHub Secrets 
+
+* AWS_ENTRY
+* AWS_ARN_ECR_ACTIONS: Amazon ECR & GitHub Actions interaction role
+* AWS_REGION: region code
+
+that enable delivery to ECR via the directives
+
+```yaml
+  with:
+    role-to-assume: arn:aws:iam::${{ secrets.AWS_ENTRY }}:role/${{ secrets.AWS_ARN_ECR_ACTIONS }}
+    aws-region: ${{ secrets.AWS_REGION }}
+```
+
+then set the `ecr` section of [main.yml](.github/workflows/main.yml) to *false*, i.e.,
+
+```yaml
+  ecr:
+    name: Amazon Elastic Container Registry
+    needs: build
+    if: ${{ false }}
+```
 
 <br>
 <br>
