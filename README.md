@@ -153,7 +153,9 @@ inspects complexity.
 
 ## Delivering Assets
 
-This example illustrates ...
+This example illustrates automatic asset delivery.  The diagram outlines ...
+
+
 
 
 
