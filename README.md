@@ -28,13 +28,15 @@ An image is built via the command
 docker build . --file .devcontainer/Dockerfile -t fundamentals
 ```
 
-On success, the output of command
+On success, the output of
 
 ```shell
 docker images
 ```
 
 should include
+
+<br>
 
 | repository   | tag    | image id | created  | size     |
 |:-------------|:-------|:---------|:---------|:---------|
@@ -80,9 +82,11 @@ IDEA** instructions are:
 <br>
 <br>
 
-## Actions
+## Code Analysis
 
-Conduct remote code 
+The GitHub Actions script [main.yml](.github/workflows/main.yml) conducts code analysis within a Cloud GitHub Workspace.  Depending on the actions script, code analysis may occur `on push` to any repository branch, or `on push` to a specific branch.
+
+The sections herein outline remote code analysis.
 
 ### pylint
 
