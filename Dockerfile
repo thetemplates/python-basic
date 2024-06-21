@@ -10,7 +10,7 @@ ARG UID=$GID
 WORKDIR /app
 COPY .devcontainer/requirements.txt /app
 RUN groupadd --system readers --gid $GID && \
-    useradd --system resident --uid $UID --gid $GID && \
+    useradd --system automata --uid $UID --gid $GID && \
     pip install --upgrade pip && \
     pip install --requirement /app/requirements.txt --no-cache-dir
 
@@ -22,7 +22,7 @@ COPY config.py /app/config.py
 EXPOSE 8050
 
 # Reader
-USER resident
+USER automata
 
 # ENTRYPOINT
 ENTRYPOINT ["python"]
