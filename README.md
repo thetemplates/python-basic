@@ -153,10 +153,10 @@ inspects complexity.
 
 ## Delivering Assets
 
-This example illustrates automatic asset delivery.  The diagram outlines ...
+This example illustrates automatic asset delivery.  The diagram outlines the delivery routes & actions.
 
 
-
+<img src="/assets/beforehand-static.png" alt="Asset Delivery">
 
 
 
