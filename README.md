@@ -1,6 +1,6 @@
 <br>
 
-A basic template for Python projects.  Incomplete, but the structure and programs are in line with language standards and team norms.
+A basic template for Python projects; the structure and programs are in line with language standards and team norms.
 
 <br>
 
@@ -28,13 +28,15 @@ An image is built via the command
 docker build . --file .devcontainer/Dockerfile -t fundamentals
 ```
 
-On success, the output of command
+On success, the output of
 
 ```shell
 docker images
 ```
 
 should include
+
+<br>
 
 | repository   | tag    | image id | created  | size     |
 |:-------------|:-------|:---------|:---------|:---------|
@@ -43,7 +45,7 @@ should include
 
 <br>
 
-Subsequently, run a container, an instance, of the image `fundamentals` via:
+Subsequently, run a container, i.e., an instance, of the image `fundamentals` via:
 
 <br>
 
@@ -59,17 +61,18 @@ i.e., -w, must be inline with this project's top directory.  Get the name of the
 docker ps --all
 ```
 
-Note, never deploy a root container, study the production [Dockerfile](Dockerfile); cf. [/.devcontainer/Dockerfile](.devcontainer/Dockerfile)
+Never deploy a root container, study the production [Dockerfile](Dockerfile); cf. [/.devcontainer/Dockerfile](.devcontainer/Dockerfile)
 
 <br>
 
 ### Remote Development & Integrated Development Environments
 
-An IDE (independent development environment) is a helpful remote development tool.  The **IntelliJ
-IDEA** instructions are:
+An IDE (integrated development environment) is a helpful remote development tool.  The **IntelliJ
+IDEA** set up involves connecting to a machine's Docker [daemon](https://www.jetbrains.com/help/idea/docker.html#connect_to_docker), the steps are
 
-> Connect to the Docker [daemon](https://www.jetbrains.com/help/idea/docker.html#connect_to_docker)
-> * **Settings** $\rightarrow$ **Build, Execution, Deployment** $\rightarrow$ **Docker** $\rightarrow$ **WSL:** `operating system`
+<br>
+
+> * **Settings** $\rightarrow$ **Build, Execution, Deployment** $\rightarrow$ **Docker** $\rightarrow$ **WSL:** {select the linux operating system}
 > * **View** $\rightarrow$ **Tool Window** $\rightarrow$ **Services** <br>Within the **Containers** section connect to the running instance of interest, or ascertain connection to the running instance of interest.
 
 <br>
@@ -80,9 +83,11 @@ IDEA** instructions are:
 <br>
 <br>
 
-## Actions
+## Code Analysis
 
-Conduct remote code 
+The GitHub Actions script [main.yml](.github/workflows/main.yml) conducts code analysis within a Cloud GitHub Workspace.  Depending on the script, code analysis may occur `on push` to any repository branch, or `on push` to a specific branch.
+
+The sections herein outline remote code analysis.
 
 ### pylint
 
@@ -142,6 +147,41 @@ python -m flake8 --count --exit-zero --max-complexity=10 --max-line-length=127 -
 ```
 
 inspects complexity.
+
+
+<br>
+<br>
+
+## Delivering Assets
+
+This example illustrates automatic asset delivery.  The diagram outlines the delivery routes & actions.
+
+
+<img src="/assets/beforehand-static.png" alt="Asset Delivery">
+
+
+Delivery to Amazon ECR (Elastic Container Registry) is conditional.  **If you do not have an Amazon account and/or** you have not set up the GitHub Secrets 
+
+* AWS_ENTRY
+* AWS_ARN_ECR_ACTIONS: Amazon ECR & GitHub Actions interaction role
+* AWS_REGION: region code
+
+that enable delivery to Amazon ECR via the directive
+
+```yaml
+  with:
+    role-to-assume: arn:aws:iam::${{ secrets.AWS_ENTRY }}:role/${{ secrets.AWS_ARN_ECR_ACTIONS }}
+    aws-region: ${{ secrets.AWS_REGION }}
+```
+
+then set the `ecr` section of [main.yml](.github/workflows/main.yml) to *false*, i.e.,
+
+```yaml
+  ecr:
+    name: Amazon Elastic Container Registry
+    needs: build
+    if: ${{ false }}
+```
 
 <br>
 <br>
