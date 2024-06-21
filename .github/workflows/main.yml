@@ -2,6 +2,9 @@ name: Templates
 
 on: [push]
 
+env:
+  REGISTRY: ghcr.io
+
 jobs:
   build:
     name: Code Analysis
@@ -14,17 +17,17 @@ jobs:
         python-version: [3.12]
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pi
-          if [ -f .devcontainer/requirements.txt ]; then pip install -r .devcontainer/requirements.txt; fi
+          python -m pip install --upgrade pip
+          if [ -f ${{ github.workspace }}/.devcontainer/requirements.txt ]; then pip install -r ${{ github.workspace }}/.devcontainer/requirements.txt; fi
 
       - name: Lint with flake8
         run: |
@@ -81,4 +84,42 @@ jobs:
           
           printf "\n Coverage tests/algorithms/"
           pytest --cov-report term-missing  --cov src/algorithms/ tests/algorithms/
-  
+
+  packages:
+    name: GitHub Packages Container Registry
+    needs: build
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Logging into GitHub Container
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+
+      - name: Build & Push
+        shell: bash
+        env:
+          REPOSITORY: ${{ github.repository }}
+          IMAGE_TAG: ${{ steps.meta.outputs.tags }}
+        run: |
+          docker build . --file Dockerfile --tag "$REGISTRY/$REPOSITORY:$IMAGE_TAG"
+          docker push ${{ env.REGISTRY }}/${{ env.REPOSITORY }}:${{ env.IMAGE_TAG }}
